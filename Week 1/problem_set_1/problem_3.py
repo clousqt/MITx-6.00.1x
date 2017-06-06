@@ -12,27 +12,27 @@
 streak = ''
 answer = ''
 for char in s:
-    #Assign streak the first character of s if streak is empty
+    # Assign streak the first character of s if streak is empty
     if streak == '':
         streak = char
         
-    #If the character is <= the last in streak, add to the end of streak
-    #reminder: 'a'>'b' returns False
+    # If the character is <= the last in streak, add to the end of streak
+    # reminder: 'a'>'b' returns False
         
     elif streak[-1] <= char:
         streak += char
         
-    #If the last character in streak is greater than the last...
+    # If the last character in streak is greater than the last...
     elif streak[-1] > char:
         
-        #Check if the current streak is the longest, if so assign its value to answer
+        # Check if the current streak is the longest, if so assign its value to answer
         if len(streak) > len(answer):
             answer=streak
             
-        #Assign streak the current char
+        # Assign streak the current char
         streak = char
         
-#Final check just in case answer is empty. Give it the current streak
+# Final check just in case answer is empty. Give it the current streak
 if len(streak) > len(answer):
     answer=streak  
     
